@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Lịch Hạ Long - Hà Nội | Tour Đa Dạng & Giá Tốt</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Biến màu sắc */
+        :root {
+            --primary: #2a9d8f;
+            --secondary: #264653;
+            --accent: #e9c46a;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+            --danger: #dc3545;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552465018-69a5c5aefd37?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .search-box {
+            background: white;
+            border-radius: 50px;
+            padding: 0.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            outline: none;
+            font-size: 1rem;
+        }
+        
+        .search-box button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        /* Tours Section */
+        .section-title {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            color: var(--secondary);
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .tours-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tour-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .tour-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .tour-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .tour-info {
+            padding: 1.5rem;
+        }
+        
+        .tour-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .tour-duration {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tour-duration i {
+            margin-right: 5px;
+        }
+        
+        .tour-description {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .tour-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1rem;
+        }
+        
+        .btn-book {
+            background: var(--accent);
+            color: var(--dark);
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        
+        /* Features Section */
+        .features {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .feature h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+        
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+            padding: 2rem 0;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            padding: 2rem;
+            position: relative;
+            animation: modalFade 0.3s;
+            margin: auto;
+        }
+        
+        @keyframes modalFade {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .modal h2 {
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .payment-info {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .payment-info h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .payment-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .payment-detail {
+            padding: 0.8rem;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .payment-detail strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--secondary);
+        }
+        
+        .qr-code {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #f8f9fa;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #dee2e6;
+            border-radius: 8px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .payment-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .payment-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e9ecef;
+            z-index: 1;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #6c757d;
+        }
+        
+        .step.active .step-number {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .step.completed .step-number {
+            background: var(--success);
+            color: white;
+        }
+        
+        .step-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .step.active .step-label {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .step.completed .step-label {
+            color: var(--success);
+        }
+        
+        .payment-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem;
+            }
+            
+            .auth-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero {
+                padding: 4rem 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .search-box {
+                flex-direction: column;
+                border-radius: 10px;
+            }
+            
+            .search-box input {
+                border-radius: 10px 10px 0 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .search-box button {
+                border-radius: 0 0 10px 10px;
+            }
+            
+            .payment-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-steps {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .payment-steps::before {
+                display: none;
+            }
+            
+            .step {
+                flex-direction: row;
+                gap: 1rem;
+            }
+            
+            .payment-actions {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .payment-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">✈️</span>
+                <h1>HaLong Tours</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Tour Hạ Long</a></li>
+                    <li><a href="#">Tour Hà Nội</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Đăng nhập</button>
+                <button class="btn btn-primary" id="registerBtn">Đăng ký</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Khám phá Vịnh Hạ Long - Kỳ quan thiên nhiên thế giới</h2>
+        <p>Trải nghiệm những tour du lịch tuyệt vời từ Hà Nội đến Hạ Long và ngược lại với giá cả hợp lý và dịch vụ chất lượng</p>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm tour, điểm đến...">
+            <button>Tìm kiếm</button>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours">
+        <div class="section-title">
+            <h2>Các Tour Phổ Biến</h2>
+            <p>Lựa chọn từ nhiều gói tour đa dạng với các mức giá phù hợp</p>
+        </div>
+        <div class="tours-container">
+            <!-- Tour 1 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tour Hạ Long 1 ngày" class="tour-image">
+                <div class="tour-info">
+                    <h3 class="tour-title">Tour Hạ Long 1 Ngày</h3>
+                    <div class="tour-duration">
+                        <i>⏱️</i> 1 ngày
+                    </div>
+                    <p class="tour-description">Khám phá vịnh Hạ Long với hành trình 1 ngày, tham quan hang Sửng Sốt, đảo Titop và nhiều điểm đến hấp dẫn khác.</p>
+                    <div class="tour-price">
+                        <div>
+                            <span class="price">1.200.000 VNĐ</span>
+                            <span class="old-price">1.500.000 VNĐ</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-book" data-tour="Tour Hạ Long 1 Ngày" data-price="1200000">Đặt ngay</button>
+                </div>
+            </div>
+            
+            <!-- Tour 2 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1552465018-69a5c5aefd37?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tour Hạ Long 2 ngày 1 đêm" class="tour-image">
+                <div class="tour-info">
+                    <h3 class="tour-title">Tour Hạ Long 2 Ngày 1 Đêm</h3>
+                    <div class="tour-duration">
+                        <i>⏱️</i> 2 ngày 1 đêm
+                    </div>
+                    <p class="tour-description">Trải nghiệm trọn vẹn vẻ đẹp Hạ Long với tour 2 ngày 1 đêm, ngủ đêm trên tàu và tham quan hang Luồn, làng chài Cửa Vạn.</p>
+                    <div class="tour-price">
+                        <div>
+                            <span class="price">2.500.000 VNĐ</span>
+                            <span class="old-price">3.000.000 VNĐ</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-book" data-tour="Tour Hạ Long 2 Ngày 1 Đêm" data-price="2500000">Đặt ngay</button>
+                </div>
+            </div>
+            
+            <!-- Tour 3 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tour Hà Nội - Hạ Long cao cấp" class="tour-image">
+                <div class="tour-info">
+                    <h3 class="tour-title">Tour Cao Cấp Hà Nội - Hạ Long</h3>
+                    <div class="tour-duration">
+                        <i>⏱️</i> 3 ngày 2 đêm
+                    </div>
+                    <p class="tour-description">Tour cao cấp kết hợp tham quan Hà Nội và Hạ Long, khách sạn 4-5 sao, ăn uống đặc sản, dịch vụ đưa đón tận nơi.</p>
+                    <div class="tour-price">
+                        <div>
+                            <span class="price">5.800.000 VNĐ</span>
+                            <span class="old-price">6.500.000 VNĐ</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-book" data-tour="Tour Cao Cấp Hà Nội - Hạ Long" data-price="5800000">Đặt ngay</button>
+                </div>
+            </div>
+            
+            <!-- Tour 4 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1544644181-1484c5a6ce64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tour Hạ Long - Tuần Châu" class="tour-image">
+                <div class="tour-info">
+                    <h3 class="tour-title">Tour Hạ Long - Đảo Tuần Châu</h3>
+                    <div class="tour-duration">
+                        <i>⏱️</i> 2 ngày 1 đêm
+                    </div>
+                    <p class="tour-description">Khám phá vịnh Hạ Long kết hợp với khu nghỉ dưỡng đảo Tuần Châu, thưởng thức các show diễn đặc sắc và ẩm thực đa dạng.</p>
+                    <div class="tour-price">
+                        <div>
+                            <span class="price">3.200.000 VNĐ</span>
+                            <span class="old-price">3.800.000 VNĐ</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-book" data-tour="Tour Hạ Long - Đảo Tuần Châu" data-price="3200000">Đặt ngay</button>
+                </div>
+            </div>
+            
+            <!-- Tour 5 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1551524164-6caac0541f28?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tour Hạ Long - Bãi Cháy" class="tour-image">
+                <div class="tour-info">
+                    <h3 class="tour-title">Tour Hạ Long - Bãi Cháy</h3>
+                    <div class="tour-duration">
+                        <i>⏱️</i> 1 ngày
+                    </div>
+                    <p class="tour-description">Tour tiết kiệm tham quan vịnh Hạ Long và khu du lịch Bãi Cháy, phù hợp cho du khách có ngân sách hạn chế.</p>
+                    <div class="tour-price">
+                        <div>
+                            <span class="price">850.000 VNĐ</span>
+                            <span class="old-price">1.000.000 VNĐ</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-book" data-tour="Tour Hạ Long - Bãi Cháy" data-price="850000">Đặt ngay</button>
+                </div>
+            </div>
+            
+            <!-- Tour 6 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1551524165-14d2e600cdb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tour Hạ Long - Vân Đồn" class="tour-image">
+                <div class="tour-info">
+                    <h3 class="tour-title">Tour Hạ Long - Vân Đồn</h3>
+                    <div class="tour-duration">
+                        <i>⏱️</i> 3 ngày 2 đêm
+                    </div>
+                    <p class="tour-description">Khám phá trọn vẹn vịnh Hạ Long và quần đảo Vân Đồn hoang sơ, trải nghiệm câu mực đêm, tắm biển và thưởng thức hải sản tươi sống.</p>
+                    <div class="tour-price">
+                        <div>
+                            <span class="price">4.500.000 VNĐ</span>
+                            <span class="old-price">5.200.000 VNĐ</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-book" data-tour="Tour Hạ Long - Vân Đồn" data-price="4500000">Đặt ngay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature">
+                <div class="feature-icon">🏆</div>
+                <h3>Dịch Vụ Chất Lượng</h3>
+                <p>Đội ngũ hướng dẫn viên chuyên nghiệp, dịch vụ đa dạng và đảm bảo chất lượng.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <h3>Giá Cả Hợp Lý</h3>
+                <p>Nhiều gói tour với mức giá phù hợp cho mọi đối tượng khách hàng.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚌</div>
+                <h3>Đưa Đón Tận Nơi</h3>
+                <p>Dịch vụ đưa đón tận nơi tại Hà Nội và Hạ Long, đảm bảo tiện lợi.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📞</div>
+                <h3>Hỗ Trợ 24/7</h3>
+                <p>Đội ngũ hỗ trợ khách hàng 24/7, sẵn sàng giải đáp mọi thắc mắc.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>Khách Hàng Nói Gì Về Chúng Tôi</h2>
+            <p>Những đánh giá chân thực từ khách hàng đã trải nghiệm dịch vụ</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p class="testimonial-text">"Tour Hạ Long 2 ngày 1 đêm thật tuyệt vời! Hướng dẫn viên nhiệt tình, thức ăn ngon và phong cảnh đẹp không thể tin được. Tôi sẽ quay lại!"</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Nguyễn Thị Mai" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Nguyễn Thị Mai</h4>
+                        <p>Hà Nội</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Dịch vụ rất chuyên nghiệp từ khâu đặt tour đến khi kết thúc chuyến đi. Giá cả hợp lý và chất lượng dịch vụ vượt mong đợi."</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Trần Văn Hùng" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Trần Văn Hùng</h4>
+                        <p>TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Tour Hạ Long 1 ngày phù hợp với lịch trình bận rộn của tôi. Tuy ngắn nhưng vẫn đủ để chiêm ngưỡng vẻ đẹp của vịnh Hạ Long."</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lê Thị Hoa" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Lê Thị Hoa</h4>
+                        <p>Đà Nẵng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Về Chúng Tôi</h3>
+                <p>HaLong Tours - Đơn vị tổ chức tour du lịch uy tín với hơn 10 năm kinh nghiệm, chuyên cung cấp các tour du lịch từ Hà Nội đến Hạ Long và ngược lại.</p>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📺</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Liên Kết Nhanh</h3>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Tour Hạ Long</a></li>
+                    <li><a href="#">Tour Hà Nội</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tour Phổ Biến</h3>
+                <ul>
+                    <li><a href="#">Tour Hạ Long 1 Ngày</a></li>
+                    <li><a href="#">Tour Hạ Long 2 Ngày 1 Đêm</a></li>
+                    <li><a href="#">Tour Cao Cấp Hà Nội - Hạ Long</a></li>
+                    <li><a href="#">Tour Hạ Long - Đảo Tuần Châu</a></li>
+                    <li><a href="#">Tour Hạ Long - Bãi Cháy</a></li>
+                    <li><a href="#">Tour Hạ Long - Vân Đồn</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Liên Hệ</h3>
+                <ul>
+                    <li>📍 123 Trần Hưng Đạo, Hoàn Kiếm, Hà Nội</li>
+                    <li>📞 1900 1234</li>
+                    <li>✉️ info@halongtours.vn</li>
+                    <li>🕒 8:00 - 22:00 hàng ngày</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 HaLong Tours. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Đặt Tour</h2>
+            
+            <div class="payment-steps">
+                <div class="step active" id="step1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Thông tin đặt tour</div>
+                </div>
+                <div class="step" id="step2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Thanh toán</div>
+                </div>
+                <div class="step" id="step3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Xác nhận</div>
+                </div>
+            </div>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="tourName">Tên Tour</label>
+                    <input type="text" id="tourName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="fullName">Họ và Tên</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="departureDate">Ngày Khởi Hành</label>
+                    <input type="date" id="departureDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="adults">Số Người Lớn</label>
+                    <select id="adults" required>
+                        <option value="1">1 người</option>
+                        <option value="2">2 người</option>
+                        <option value="3">3 người</option>
+                        <option value="4">4 người</option>
+                        <option value="5">5 người</option>
+                        <option value="6">6 người trở lên</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="children">Số Trẻ Em (dưới 12 tuổi)</label>
+                    <select id="children">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="specialRequest">Yêu Cầu Đặc Biệt</label>
+                    <textarea id="specialRequest" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <p id="totalPrice">Tổng tiền: 0 VNĐ</p>
+                </div>
+                <div class="payment-actions">
+                    <button type="button" class="btn btn-outline" id="backToTours">Quay lại</button>
+                    <button type="button" class="btn btn-primary" id="proceedToPayment">Tiến hành thanh toán</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Thanh Toán</h2>
+            
+            <div class="payment-steps">
+                <div class="step completed" id="step1-payment">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Thông tin đặt tour</div>
+                </div>
+                <div class="step active" id="step2-payment">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Thanh toán</div>
+                </div>
+                <div class="step" id="step3-payment">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Xác nhận</div>
+                </div>
+            </div>
+            
+            <div class="payment-info">
+                <h3>Thông tin chuyển khoản</h3>
+                <p>Vui lòng chuyển khoản tổng số tiền theo thông tin dưới đây. Sau khi chuyển khoản, vui lòng gửi biên lai cho chúng tôi qua email hoặc Zalo để xác nhận đặt tour.</p>
+                
+                <div class="payment-details">
+                    <div class="payment-detail">
+                        <strong>Số tài khoản</strong>
+                        <span>068394585</span>
+                    </div>
+                    <div class="payment-detail">
+                        <strong>Chủ tài khoản</strong>
+                        <span>KIÊU THANH HÀI</span>
+                    </div>
+                    <div class="payment-detail">
+                        <strong>Ngân hàng</strong>
+                        <span>VIETOR pay</span>
+                    </div>
+                    <div class="payment-detail">
+                        <strong>Chi nhánh</strong>
+                        <span>napas 247</span>
+                    </div>
+                    <div class="payment-detail">
+                        <strong>Số tiền</strong>
+                        <span id="paymentAmount">0 VNĐ</span>
+                    </div>
+                    <div class="payment-detail">
+                        <strong>Nội dung chuyển khoản</strong>
+                        <span id="paymentNote">TOUR HL [Số điện thoại]</span>
+                    </div>
+                </div>
+                
+                <div class="qr-code">
+                    <h4>Quét mã QR để chuyển khoản</h4>
+                    <div class="qr-placeholder">
+                        Mã QR thanh toán<br>
+                        (Trong thực tế sẽ hiển thị mã QR thật)
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-actions">
+                <button type="button" class="btn btn-outline" id="backToBooking">Quay lại</button>
+                <button type="button" class="btn btn-success" id="confirmPayment">Tôi đã thanh toán</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Xác Nhận Đặt Tour</h2>
+            
+            <div class="payment-steps">
+                <div class="step completed" id="step1-confirm">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Thông tin đặt tour</div>
+                </div>
+                <div class="step completed" id="step2-confirm">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Thanh toán</div>
+                </div>
+                <div class="step active" id="step3-confirm">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Xác nhận</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding: 2rem 0;">
+                <div style="font-size: 4rem; color: var(--success); margin-bottom: 1rem;">✓</div>
+                <h3 style="color: var(--success); margin-bottom: 1rem;">Đặt Tour Thành Công!</h3>
+                <p>Cảm ơn bạn đã đặt tour với HaLong Tours. Chúng tôi đã nhận được thông tin đặt tour của bạn và sẽ liên hệ xác nhận trong vòng 24 giờ.</p>
+                <p>Mã đặt tour của bạn: <strong id="bookingCode">HL2023001</strong></p>
+                
+                <div style="margin-top: 2rem;">
+                    <button type="button" class="btn btn-primary" id="finishBooking">Hoàn tất</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Đăng Nhập</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Mật Khẩu</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Nhập</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Chưa có tài khoản? <a href="#" id="switchToRegister">Đăng ký ngay</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Đăng Ký</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regFullName">Họ và Tên</label>
+                    <input type="text" id="regFullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPhone">Số Điện Thoại</label>
+                    <input type="tel" id="regPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Mật Khẩu</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Xác Nhận Mật Khẩu</label>
+                    <input type="password" id="regConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng Ký</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Đã có tài khoản? <a href="#" id="switchToLogin">Đăng nhập ngay</a></p>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const bookingModal = document.getElementById('bookingModal');
+        const paymentModal = document.getElementById('paymentModal');
+        const confirmationModal = document.getElementById('confirmationModal');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+        const bookButtons = document.querySelectorAll('.btn-book');
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const switchToRegister = document.getElementById('switchToRegister');
+        const switchToLogin = document.getElementById('switchToLogin');
+        const bookingForm = document.getElementById('bookingForm');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const tourNameInput = document.getElementById('tourName');
+        const adultsSelect = document.getElementById('adults');
+        const childrenSelect = document.getElementById('children');
+        const totalPriceElement = document.getElementById('totalPrice');
+        const paymentAmountElement = document.getElementById('paymentAmount');
+        const paymentNoteElement = document.getElementById('paymentNote');
+        const proceedToPaymentBtn = document.getElementById('proceedToPayment');
+        const backToBookingBtn = document.getElementById('backToBooking');
+        const backToToursBtn = document.getElementById('backToTours');
+        const confirmPaymentBtn = document.getElementById('confirmPayment');
+        const finishBookingBtn = document.getElementById('finishBooking');
+        
+        let currentTourPrice = 0;
+        let currentTourName = '';
+        let currentPhone = '';
+        
+        // Event Listeners
+        bookButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                currentTourName = button.getAttribute('data-tour');
+                currentTourPrice = parseInt(button.getAttribute('data-price'));
+                
+                tourNameInput.value = currentTourName;
+                updateTotalPrice();
+                
+                bookingModal.style.display = 'flex';
+            });
+        });
+        
+        loginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'flex';
+        });
+        
+        registerBtn.addEventListener('click', () => {
+            registerModal.style.display = 'flex';
+        });
+        
+        switchToRegister.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.style.display = 'none';
+            registerModal.style.display = 'flex';
+        });
+        
+        switchToLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            registerModal.style.display = 'none';
+            loginModal.style.display = 'flex';
+        });
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                bookingModal.style.display = 'none';
+                paymentModal.style.display = 'none';
+                confirmationModal.style.display = 'none';
+                loginModal.style.display = 'none';
+                registerModal.style.display = 'none';
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                bookingModal.style.display = 'none';
+            }
+            if (e.target === paymentModal) {
+                paymentModal.style.display = 'none';
+            }
+            if (e.target === confirmationModal) {
+                confirmationModal.style.display = 'none';
+            }
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (e.target === registerModal) {
+                registerModal.style.display = 'none';
+            }
+        });
+        
+        // Update total price when number of people changes
+        adultsSelect.addEventListener('change', updateTotalPrice);
+        childrenSelect.addEventListener('change', updateTotalPrice);
+        
+        function updateTotalPrice() {
+            const adults = parseInt(adultsSelect.value);
+            const children = parseInt(childrenSelect.value);
+            // Children get 50% discount
+            const totalPrice = (adults * currentTourPrice) + (children * currentTourPrice * 0.5);
+            totalPriceElement.textContent = `Tổng tiền: ${formatCurrency(totalPrice)} VNĐ`;
+        }
+        
+        function formatCurrency(amount) {
+            return amount.toLocaleString('vi-VN');
+        }
+        
+        // Proceed to payment
+        proceedToPaymentBtn.addEventListener('click', () => {
+            // Validate form
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            currentPhone = document.getElementById('phone').value;
+            const departureDate = document.getElementById('departureDate').value;
+            
+            if (!fullName || !email || !currentPhone || !departureDate) {
+                alert('Vui lòng điền đầy đủ thông tin bắt buộc.');
+                return;
+            }
+            
+            // Calculate total amount
+            const adults = parseInt(adultsSelect.value);
+            const children = parseInt(childrenSelect.value);
+            const totalPrice = (adults * currentTourPrice) + (children * currentTourPrice * 0.5);
+            
+            // Update payment information
+            paymentAmountElement.textContent = `${formatCurrency(totalPrice)} VNĐ`;
+            paymentNoteElement.textContent = `TOUR HL ${currentPhone}`;
+            
+            // Show payment modal
+            bookingModal.style.display = 'none';
+            paymentModal.style.display = 'flex';
+        });
+        
+        // Back to booking
+        backToBookingBtn.addEventListener('click', () => {
+            paymentModal.style.display = 'none';
+            bookingModal.style.display = 'flex';
+        });
+        
+        // Back to tours
+        backToToursBtn.addEventListener('click', () => {
+            bookingModal.style.display = 'none';
+        });
+        
+        // Confirm payment
+        confirmPaymentBtn.addEventListener('click', () => {
+            // Generate random booking code
+            const bookingCode = 'HL' + new Date().getFullYear() + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('bookingCode').textContent = bookingCode;
+            
+            paymentModal.style.display = 'none';
+            confirmationModal.style.display = 'flex';
+        });
+        
+        // Finish booking
+        finishBookingBtn.addEventListener('click', () => {
+            confirmationModal.style.display = 'none';
+            bookingForm.reset();
+        });
+        
+        // Form submissions
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Đăng nhập thành công!');
+            loginModal.style.display = 'none';
+            loginForm.reset();
+        });
+        
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Đăng ký thành công! Vui lòng kiểm tra email để xác nhận tài khoản.');
+            registerModal.style.display = 'none';
+            registerForm.reset();
+        });
+        
+        // Initialize total price
+        updateTotalPrice();
+        
+        // Set minimum date for departure date to today
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        const minDate = `${yyyy}-${mm}-${dd}`;
+        document.getElementById('departureDate').min = minDate;
+    </script>
+</body>
+</html>
