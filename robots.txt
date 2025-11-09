@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abcxyzDustry.github.io/halong-tour-website/sitemap.xml
