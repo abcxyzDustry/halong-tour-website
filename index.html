@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>China Tours - Du Lịch Trung Quốc | Quảng Châu, Thâm Quyến, Thượng Hải</title>
-    <meta name="description" content="Đặt tour du lịch Trung Quốc: Quảng Châu, Thâm Quyến, Thượng Hải, Cáp Nhĩ Tân, Nam Kinh. Tour chất lượng, giá tốt 2025. Đặt tour online dễ dàng.">
-    <meta name="keywords" content="tour trung quốc, du lịch quảng châu, thâm quyến, thượng hải, cáp nhĩ tân, nam kinh, tour trung quốc giá rẻ">
+    <meta name="description" content="Đặt tour du lịch Trung Quốc: Quảng Châu, Thâm Quyến, Thượng Hải, Cáp Nhĩ Tân, Nam Kinh. Tour chất lượng, giá tốt 2025.">
+    <meta name="keywords" content="tour trung quốc, du lịch quảng châu, thâm quyến, thượng hải, cáp nhĩ tân, nam kinh">
     <meta name="author" content="China Tours">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://abcxyzDustry.github.io/china-tour-website">
     
-    <!-- Firebase App -->
+    <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <!-- Firebase Firestore -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <!-- Firebase Auth -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     
     <style>
-        /* Reset CSS */
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +21,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        /* Biến màu sắc */
         :root {
             --primary: #e74c3c;
             --secondary: #2c3e50;
@@ -155,11 +149,6 @@
         
         .btn-danger {
             background: var(--danger);
-            color: white;
-        }
-        
-        .btn-warning {
-            background: var(--warning);
             color: white;
         }
         
@@ -356,137 +345,6 @@
             font-size: 1.3rem;
         }
         
-        /* Testimonials */
-        .testimonials {
-            padding: 4rem 2rem;
-            background: #f8f9fa;
-        }
-        
-        .testimonials-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .testimonial {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: #555;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 1rem;
-        }
-        
-        .author-info h4 {
-            margin-bottom: 0.2rem;
-        }
-        
-        .author-info p {
-            color: #777;
-            font-size: 0.9rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--secondary);
-            color: white;
-            padding: 4rem 2rem 2rem;
-        }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-        
-        .footer-column h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--accent);
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-column ul li a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-column ul li a:hover {
-            color: var(--accent);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            color: white;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-        
         /* Modal */
         .modal {
             display: none;
@@ -507,7 +365,7 @@
             background: white;
             border-radius: 10px;
             width: 90%;
-            max-width: 600px;
+            max-width: 500px;
             padding: 2rem;
             position: relative;
             animation: modalFade 0.3s;
@@ -575,9 +433,6 @@
         }
         
         .dashboard-header {
-            display: flex;
-            justify-content: between;
-            align-items: center;
             margin-bottom: 2rem;
         }
         
@@ -613,9 +468,6 @@
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
         
         .booking-info h3 {
@@ -628,6 +480,7 @@
             gap: 1rem;
             color: #666;
             font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
         
         .booking-status {
@@ -635,6 +488,7 @@
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
+            display: inline-block;
         }
         
         .status-confirmed {
@@ -659,98 +513,6 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
         
-        .admin-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-        
-        .admin-table th, .admin-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .admin-table th {
-            background: #f8f9fa;
-            font-weight: 600;
-            color: var(--secondary);
-        }
-        
-        .admin-table tr:hover {
-            background: #f8f9fa;
-        }
-        
-        /* Payment Steps */
-        .payment-steps {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-        
-        .payment-steps::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: #e9ecef;
-            z-index: 1;
-        }
-        
-        .step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .step-number {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #6c757d;
-        }
-        
-        .step.active .step-number {
-            background: var(--primary);
-            color: white;
-        }
-        
-        .step.completed .step-number {
-            background: var(--success);
-            color: white;
-        }
-        
-        .step-label {
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-        
-        .step.active .step-label {
-            color: var(--primary);
-            font-weight: 500;
-        }
-        
-        .step.completed .step-label {
-            color: var(--success);
-        }
-        
-        .payment-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
-        }
-        
         /* Loading Spinner */
         .loading {
             display: inline-block;
@@ -764,56 +526,6 @@
         
         @keyframes spin {
             to { transform: rotate(360deg); }
-        }
-        
-        /* QR Code Section */
-        .qr-code {
-            text-align: center;
-            margin: 1.5rem 0;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-        }
-        
-        .qr-code img {
-            width: 220px;
-            height: 220px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-        
-        .bank-info {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-            border-left: 4px solid var(--primary);
-        }
-        
-        .bank-info h3 {
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-        
-        .payment-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .payment-detail {
-            padding: 0.8rem;
-            background: white;
-            border-radius: 5px;
-            border: 1px solid #e9ecef;
-        }
-        
-        .payment-detail strong {
-            display: block;
-            margin-bottom: 0.3rem;
-            color: var(--secondary);
         }
         
         /* Alert Styles */
@@ -839,6 +551,66 @@
             background: #e3f2fd;
             color: var(--info);
             border: 1px solid #b3e0ff;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
         }
         
         /* Responsive */
@@ -886,36 +658,6 @@
                 border-radius: 0 0 10px 10px;
             }
             
-            .booking-card {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-            
-            .payment-steps {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-            
-            .payment-steps::before {
-                display: none;
-            }
-            
-            .step {
-                flex-direction: row;
-                gap: 1rem;
-            }
-            
-            .payment-actions {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .payment-actions .btn {
-                width: 100%;
-            }
-            
             .dashboard-tabs {
                 flex-wrap: wrap;
             }
@@ -926,8 +668,9 @@
                 text-align: center;
             }
             
-            .payment-details {
-                grid-template-columns: 1fr;
+            .booking-meta {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -946,8 +689,6 @@
                     <li><a href="#" class="nav-link" data-page="tours">Tour Trung Quốc</a></li>
                     <li><a href="#" class="nav-link" data-page="dashboard" id="dashboardLink" style="display:none;">Quản lý đặt tour</a></li>
                     <li><a href="#" class="nav-link" data-page="admin" id="adminLink" style="display:none;">Admin Panel</a></li>
-                    <li><a href="#">Tin tức</a></li>
-                    <li><a href="#">Liên hệ</a></li>
                 </ul>
             </nav>
             <div class="auth-buttons" id="authButtons">
@@ -981,7 +722,7 @@
                 <p>Lựa chọn từ nhiều gói tour đa dạng với các mức giá phù hợp</p>
             </div>
             <div class="tours-container" id="toursContainer">
-                <!-- Tours will be loaded from database -->
+                <div class="loading-tours">Đang tải tours...</div>
             </div>
         </section>
 
@@ -1010,46 +751,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="section-title">
-                <h2>Khách Hàng Nói Gì Về Chúng Tôi</h2>
-                <p>Những đánh giá chân thực từ khách hàng đã trải nghiệm dịch vụ</p>
-            </div>
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <p class="testimonial-text">"Tour Quảng Châu 4 ngày 3 đêm thật tuyệt vời! Hướng dẫn viên nhiệt tình, thức ăn ngon và các điểm tham quan rất đa dạng. Tôi sẽ quay lại!"</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Nguyễn Thị Mai" class="author-avatar">
-                        <div class="author-info">
-                            <h4>Nguyễn Thị Mai</h4>
-                            <p>Hà Nội</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">"Dịch vụ rất chuyên nghiệp từ khâu đặt tour đến khi kết thúc chuyến đi. Giá cả hợp lý và chất lượng dịch vụ vượt mong đợi."</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Trần Văn Hùng" class="author-avatar">
-                        <div class="author-info">
-                            <h4>Trần Văn Hùng</h4>
-                            <p>TP. Hồ Chí Minh</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">"Tour Thâm Quyến 3 ngày phù hợp với lịch trình bận rộn của tôi. Các khu mua sắm và giải trí rất hiện đại và thú vị."</p>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lê Thị Hoa" class="author-avatar">
-                        <div class="author-info">
-                            <h4>Lê Thị Hoa</h4>
-                            <p>Đà Nẵng</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 
     <!-- Dashboard Page -->
@@ -1067,7 +768,7 @@
             <div class="tab-content active" id="bookingsTab">
                 <h3>Lịch Sử Đặt Tour</h3>
                 <div id="userBookings">
-                    <!-- Bookings will be populated by JavaScript -->
+                    <p>Đang tải dữ liệu...</p>
                 </div>
             </div>
             
@@ -1085,12 +786,8 @@
                         </div>
                         <div class="form-group">
                             <label for="profilePhone">Số Điện Thoại</label>
-                            <input type="tel" id="profilePhone" required>
-                            <div class="error-message" id="profilePhoneError">Số điện thoại không hợp lệ</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="profileAddress">Địa Chỉ</label>
-                            <input type="text" id="profileAddress">
+                            <input type="tel" id="profilePhone" required pattern="[0-9]{10,11}">
+                            <div class="error-message" id="profilePhoneError">Số điện thoại phải có 10-11 chữ số</div>
                         </div>
                         <button type="submit" class="btn btn-primary">Cập Nhật Thông Tin</button>
                     </form>
@@ -1108,76 +805,25 @@
             
             <div class="dashboard-tabs">
                 <div class="tab active" data-tab="allBookings">Tất Cả Đơn Đặt</div>
-                <div class="tab" data-tab="users">Quản Lý Người Dùng</div>
                 <div class="tab" data-tab="toursManagement">Quản Lý Tour</div>
             </div>
             
             <div class="tab-content active" id="allBookingsTab">
                 <h3>Quản Lý Đơn Đặt Tour</h3>
                 <div class="admin-panel">
-                    <table class="admin-table">
-                        <thead>
-                            <tr>
-                                <th>Mã Đặt</th>
-                                <th>Khách Hàng</th>
-                                <th>Tour</th>
-                                <th>Ngày Khởi Hành</th>
-                                <th>Số Người</th>
-                                <th>Tổng Tiền</th>
-                                <th>Trạng Thái</th>
-                                <th>Thao Tác</th>
-                            </tr>
-                        </thead>
-                        <tbody id="allBookingsTable">
-                            <!-- All bookings will be populated by JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <div class="tab-content" id="usersTab">
-                <h3>Quản Lý Người Dùng</h3>
-                <div class="admin-panel">
-                    <table class="admin-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Họ Tên</th>
-                                <th>Email</th>
-                                <th>Số ĐT</th>
-                                <th>Ngày Đăng Ký</th>
-                                <th>Số Tour Đã Đặt</th>
-                                <th>Thao Tác</th>
-                            </tr>
-                        </thead>
-                        <tbody id="usersTable">
-                            <!-- Users will be populated by JavaScript -->
-                        </tbody>
-                    </table>
+                    <div id="allBookingsList">
+                        <p>Đang tải dữ liệu...</p>
+                    </div>
                 </div>
             </div>
             
             <div class="tab-content" id="toursManagementTab">
                 <h3>Quản Lý Tour</h3>
                 <div class="admin-panel">
-                    <button class="btn btn-primary" style="margin-bottom: 1rem;" id="addTourBtn">Thêm Tour Mới</button>
-                    <table class="admin-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Tên Tour</th>
-                                <th>Điểm Đến</th>
-                                <th>Thời Gian</th>
-                                <th>Giá</th>
-                                <th>Giá Cũ</th>
-                                <th>Trạng Thái</th>
-                                <th>Thao Tác</th>
-                            </tr>
-                        </thead>
-                        <tbody id="toursTable">
-                            <!-- Tours will be populated by JavaScript -->
-                        </tbody>
-                    </table>
+                    <button class="btn btn-primary" style="margin-bottom: 1rem;" onclick="showAddTourModal()">Thêm Tour Mới</button>
+                    <div id="toursList">
+                        <p>Đang tải dữ liệu...</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1188,21 +834,13 @@
         <div class="footer-container">
             <div class="footer-column">
                 <h3>Về Chúng Tôi</h3>
-                <p>China Tours - Đơn vị tổ chức tour du lịch Trung Quốc uy tín với hơn 10 năm kinh nghiệm, chuyên cung cấp các tour du lịch chất lượng cao.</p>
-                <div class="social-links">
-                    <a href="#">📘</a>
-                    <a href="#">📷</a>
-                    <a href="#">🐦</a>
-                    <a href="#">📺</a>
-                </div>
+                <p>China Tours - Đơn vị tổ chức tour du lịch Trung Quốc uy tín với hơn 10 năm kinh nghiệm.</p>
             </div>
             <div class="footer-column">
                 <h3>Liên Kết Nhanh</h3>
                 <ul>
                     <li><a href="#" class="nav-link" data-page="home">Trang chủ</a></li>
                     <li><a href="#" class="nav-link" data-page="tours">Tour Trung Quốc</a></li>
-                    <li><a href="#">Khuyến mãi</a></li>
-                    <li><a href="#">Tin tức</a></li>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
             </div>
@@ -1212,283 +850,21 @@
                     <li><a href="#">Tour Quảng Châu</a></li>
                     <li><a href="#">Tour Thâm Quyến</a></li>
                     <li><a href="#">Tour Thượng Hải</a></li>
-                    <li><a href="#">Tour Cáp Nhĩ Tân</a></li>
-                    <li><a href="#">Tour Nam Kinh</a></li>
-                    <li><a href="#">Tour Bắc Kinh - Thượng Hải</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Liên Hệ</h3>
                 <ul>
-                    <li>📍 123 Trần Hưng Đạo, Hoàn Kiếm, Hà Nội</li>
+                    <li>📍 123 Trần Hưng Đạo, Hà Nội</li>
                     <li>📞 1900 5678</li>
                     <li>✉️ info@chinatours.vn</li>
-                    <li>🕒 8:00 - 22:00 hàng ngày</li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2024 China Tours. Tất cả các quyền được bảo lưu.</p>
+            <p>&copy; 2025 China Tours. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
-
-    <!-- Booking Modal -->
-    <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Đặt Tour</h2>
-            
-            <div class="payment-steps">
-                <div class="step active" id="step1">
-                    <div class="step-number">1</div>
-                    <div class="step-label">Thông tin đặt tour</div>
-                </div>
-                <div class="step" id="step2">
-                    <div class="step-number">2</div>
-                    <div class="step-label">Thanh toán</div>
-                </div>
-                <div class="step" id="step3">
-                    <div class="step-number">3</div>
-                    <div class="step-label">Xác nhận</div>
-                </div>
-            </div>
-            
-            <form id="bookingForm">
-                <div class="form-group">
-                    <label for="tourName">Tên Tour</label>
-                    <input type="text" id="tourName" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="fullName">Họ và Tên</label>
-                    <input type="text" id="fullName" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Số Điện Thoại</label>
-                    <input type="tel" id="phone" required pattern="[0-9]{10,11}" title="Số điện thoại phải có 10-11 chữ số">
-                    <div class="error-message" id="phoneError">Số điện thoại phải có 10-11 chữ số</div>
-                </div>
-                <div class="form-group">
-                    <label for="departureDate">Ngày Khởi Hành</label>
-                    <input type="date" id="departureDate" required>
-                </div>
-                <div class="form-group">
-                    <label for="adults">Số Người Lớn</label>
-                    <select id="adults" required>
-                        <option value="1">1 người</option>
-                        <option value="2">2 người</option>
-                        <option value="3">3 người</option>
-                        <option value="4">4 người</option>
-                        <option value="5">5 người</option>
-                        <option value="6">6 người trở lên</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="children">Số Trẻ Em (dưới 12 tuổi)</label>
-                    <select id="children">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="specialRequest">Yêu Cầu Đặc Biệt</label>
-                    <textarea id="specialRequest" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <p id="totalPrice">Tổng tiền: 0 VNĐ</p>
-                </div>
-                <div class="payment-actions">
-                    <button type="button" class="btn btn-outline" id="backToTours">Quay lại</button>
-                    <button type="button" class="btn btn-primary" id="proceedToPayment">Tiến hành thanh toán</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Payment Modal -->
-    <div class="modal" id="paymentModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Thanh Toán</h2>
-            
-            <div class="payment-steps">
-                <div class="step completed" id="step1-payment">
-                    <div class="step-number">1</div>
-                    <div class="step-label">Thông tin đặt tour</div>
-                </div>
-                <div class="step active" id="step2-payment">
-                    <div class="step-number">2</div>
-                    <div class="step-label">Thanh toán</div>
-                </div>
-                <div class="step" id="step3-payment">
-                    <div class="step-number">3</div>
-                    <div class="step-label">Xác nhận</div>
-                </div>
-            </div>
-            
-            <div class="payment-info">
-                <h3>Thông tin thanh toán</h3>
-                <p>Vui lòng chọn phương thức thanh toán phù hợp với bạn.</p>
-                
-                <div class="form-group">
-                    <label>Phương Thức Thanh Toán</label>
-                    <div>
-                        <input type="radio" id="bankTransfer" name="paymentMethod" value="bank" checked>
-                        <label for="bankTransfer">Chuyển Khoản Ngân Hàng</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="creditCard" name="paymentMethod" value="card">
-                        <label for="creditCard">Thẻ Tín Dụng/Ghi Nợ</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="momo" name="paymentMethod" value="momo">
-                        <label for="momo">Ví Điện Tử MoMo</label>
-                    </div>
-                </div>
-                
-                <div id="bankDetails">
-                    <div class="bank-info">
-                        <h3>Thông tin chuyển khoản</h3>
-                        <p>Vui lòng chuyển khoản tổng số tiền theo thông tin dưới đây. Sau khi chuyển khoản, vui lòng gửi biên lai cho chúng tôi qua email hoặc Zalo để xác nhận đặt tour.</p>
-                        
-                        <div class="payment-details">
-                            <div class="payment-detail">
-                                <strong>Số tài khoản</strong>
-                                <span>068394585</span>
-                            </div>
-                            <div class="payment-detail">
-                                <strong>Chủ tài khoản</strong>
-                                <span>KIÊU THANH HÀI</span>
-                            </div>
-                            <div class="payment-detail">
-                                <strong>Ngân hàng</strong>
-                                <span>VIB</span>
-                            </div>
-                            <div class="payment-detail">
-                                <strong>Chi nhánh</strong>
-                                <span>Hải Phòng</span>
-                            </div>
-                            <div class="payment-detail">
-                                <strong>Số tiền</strong>
-                                <span id="paymentAmount">0 VNĐ</span>
-                            </div>
-                            <div class="payment-detail">
-                                <strong>Nội dung chuyển khoản</strong>
-                                <span id="paymentNote">TOUR HL [Số điện thoại]</span>
-                            </div>
-                        </div>
-                        
-                        <div class="qr-code">
-                            <h4>Quét mã QR để chuyển khoản</h4>
-                            <img src="https://qr.sepay.vn/img?bank=VIB&acc=068394585&template=compact&amount=&des=TOUR+HL+%5Bsđt+của+bạn%5D" 
-                                 alt="QR Code Vietor Pay - KIÊU THANH HÀI - 068394585">
-                            
-                            <div style="margin-top: 15px; padding: 12px; background: #f8f9fa; border-radius: 8px; text-align: center; font-size: 0.9rem;">
-                                <div style="margin-bottom: 8px;">
-                                    <strong style="color: #2a9d8f;">VIETOR PAY</strong>
-                                </div>
-                                <div style="margin-bottom: 8px;">
-                                    <strong>Chủ tài khoản: KIÊU THANH HÀI</strong>
-                                </div>
-                                <div>
-                                    <strong>Số tài khoản: 068394585</strong>
-                                </div>
-                            </div>
-                            
-                            <p style="margin-top: 10px; font-size: 0.8rem; color: #666; text-align: center;">
-                                Quét mã QR hoặc chuyển khoản trực tiếp<br>
-                                Nội dung: <strong>TOUR HL [Số điện thoại của bạn]</strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="cardDetails" class="payment-details" style="display:none;">
-                    <div class="form-group">
-                        <label for="cardNumber">Số Thẻ</label>
-                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" pattern="[0-9\s]{13,19}" title="Số thẻ phải có 13-19 chữ số">
-                    </div>
-                    <div class="form-group">
-                        <label for="cardName">Tên Chủ Thẻ</label>
-                        <input type="text" id="cardName" placeholder="NGUYEN VAN A">
-                    </div>
-                    <div style="display: flex; gap: 1rem;">
-                        <div class="form-group" style="flex: 1;">
-                            <label for="expiryDate">Ngày Hết Hạn</label>
-                            <input type="text" id="expiryDate" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" title="Định dạng MM/YY">
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" placeholder="123" pattern="[0-9]{3,4}" title="CVV phải có 3-4 chữ số">
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="momoDetails" class="payment-details" style="display:none; text-align: center;">
-                    <div class="qr-code">
-                        <h4>Quét mã QR để thanh toán qua MoMo</h4>
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=momochinatours" 
-                             alt="QR Code MoMo">
-                        <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
-                            Hoặc chuyển khoản đến số điện thoại: <strong>0909 123 456</strong><br>
-                            Nội dung: <strong>TOUR CN [Số điện thoại của bạn]</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="payment-actions">
-                <button type="button" class="btn btn-outline" id="backToBooking">Quay lại</button>
-                <button type="button" class="btn btn-success" id="confirmPayment">
-                    <span id="confirmPaymentText">Xác nhận thanh toán</span>
-                    <span id="confirmPaymentLoading" class="loading" style="display: none;"></span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Confirmation Modal -->
-    <div class="modal" id="confirmationModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Xác Nhận Đặt Tour</h2>
-            
-            <div class="payment-steps">
-                <div class="step completed" id="step1-confirm">
-                    <div class="step-number">1</div>
-                    <div class="step-label">Thông tin đặt tour</div>
-                </div>
-                <div class="step completed" id="step2-confirm">
-                    <div class="step-number">2</div>
-                    <div class="step-label">Thanh toán</div>
-                </div>
-                <div class="step active" id="step3-confirm">
-                    <div class="step-number">3</div>
-                    <div class="step-label">Xác nhận</div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; padding: 2rem 0;">
-                <div style="font-size: 4rem; color: var(--success); margin-bottom: 1rem;">✓</div>
-                <h3 style="color: var(--success); margin-bottom: 1rem;">Đặt Tour Thành Công!</h3>
-                <p>Cảm ơn bạn đã đặt tour với China Tours. Chúng tôi đã nhận được thông tin đặt tour của bạn và sẽ liên hệ xác nhận trong vòng 24 giờ.</p>
-                <p>Mã đặt tour của bạn: <strong id="bookingCode">CN2023001</strong></p>
-                <div class="alert alert-info" style="margin: 1rem 0;">
-                    <strong>Thông báo:</strong> Email xác nhận đã được gửi đến địa chỉ email của bạn.
-                </div>
-                
-                <div style="margin-top: 2rem;">
-                    <button type="button" class="btn btn-primary" id="finishBooking">Hoàn tất</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Login Modal -->
     <div class="modal" id="loginModal">
@@ -1529,7 +905,7 @@
                 </div>
                 <div class="form-group">
                     <label for="regPhone">Số Điện Thoại</label>
-                    <input type="tel" id="regPhone" required pattern="[0-9]{10,11}" title="Số điện thoại phải có 10-11 chữ số">
+                    <input type="tel" id="regPhone" required pattern="[0-9]{10,11}">
                     <div class="error-message" id="regPhoneError">Số điện thoại phải có 10-11 chữ số</div>
                 </div>
                 <div class="form-group">
@@ -1550,483 +926,655 @@
         </div>
     </div>
 
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Đặt Tour</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="tourName">Tên Tour</label>
+                    <input type="text" id="tourName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="bookingAdults">Số Người Lớn</label>
+                    <select id="bookingAdults" required>
+                        <option value="1">1 người</option>
+                        <option value="2">2 người</option>
+                        <option value="3">3 người</option>
+                        <option value="4">4 người</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bookingChildren">Số Trẻ Em (dưới 12 tuổi)</label>
+                    <select id="bookingChildren">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bookingDate">Ngày Khởi Hành</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+                <div class="form-group">
+                    <p id="bookingTotalPrice">Tổng tiền: 0 VNĐ</p>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Xác Nhận Đặt Tour</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
-        // ==================== FIREBASE CONFIGURATION ====================
-        
-        // Firebase configuration - Replace with your actual Firebase config
+        // ==================== FIREBASE CONFIG ====================
         const firebaseConfig = {
-            apiKey: "AIzaSyC4RfD7vRcVq7VjXq9V9wXwXwXwXwXwXwXw",
-            authDomain: "china-tours-app.firebaseapp.com",
-            projectId: "china-tours-app",
-            storageBucket: "china-tours-app.appspot.com",
-            messagingSenderId: "123456789012",
-            appId: "1:123456789012:web:abcdef123456"
+            apiKey: "AIzaSyAAzVFdN-RIpqksb39bp2VIV8KP4_C6VTA",
+            authDomain: "china-tour.firebaseapp.com",
+            projectId: "china-tour",
+            storageBucket: "china-tour.firebasestorage.app",
+            messagingSenderId: "59324575744",
+            appId: "1:59324575744:web:205343e1f46badc77f68e5",
+            measurementId: "G-J2ECV2X5SC"
         };
-        
+
         // Initialize Firebase
+        let db, auth;
         try {
             firebase.initializeApp(firebaseConfig);
-            const db = firebase.firestore();
-            const auth = firebase.auth();
-            console.log("Firebase initialized successfully");
+            db = firebase.firestore();
+            auth = firebase.auth();
+            console.log("Firebase initialized successfully!");
         } catch (error) {
-            console.log("Firebase initialization failed, using localStorage fallback:", error);
-            // Fallback to localStorage if Firebase fails
+            console.error("Firebase initialization error:", error);
         }
-        
-        // ==================== DATABASE FUNCTIONS ====================
-        
-        // Check if Firebase is available
-        const isFirebaseAvailable = () => {
-            return typeof firebase !== 'undefined' && firebase.apps.length > 0;
-        };
-        
-        // Save data to Firebase or localStorage
-        async function saveData(collection, data) {
-            if (isFirebaseAvailable()) {
-                try {
-                    if (data.id) {
-                        await db.collection(collection).doc(data.id.toString()).set(data);
-                    } else {
-                        const docRef = await db.collection(collection).add(data);
-                        data.id = docRef.id;
-                        await db.collection(collection).doc(docRef.id).update({ id: docRef.id });
-                    }
-                    return data;
-                } catch (error) {
-                    console.error("Error saving to Firebase:", error);
-                    // Fallback to localStorage
-                    return saveToLocalStorage(collection, data);
-                }
-            } else {
-                return saveToLocalStorage(collection, data);
-            }
-        }
-        
-        // Get data from Firebase or localStorage
-        async function getData(collection) {
-            if (isFirebaseAvailable()) {
-                try {
-                    const snapshot = await db.collection(collection).get();
-                    return snapshot.docs.map(doc => doc.data());
-                } catch (error) {
-                    console.error("Error reading from Firebase:", error);
-                    // Fallback to localStorage
-                    return getFromLocalStorage(collection);
-                }
-            } else {
-                return getFromLocalStorage(collection);
-            }
-        }
-        
-        // Delete data from Firebase or localStorage
-        async function deleteData(collection, id) {
-            if (isFirebaseAvailable()) {
-                try {
-                    await db.collection(collection).doc(id.toString()).delete();
-                    return true;
-                } catch (error) {
-                    console.error("Error deleting from Firebase:", error);
-                    // Fallback to localStorage
-                    return deleteFromLocalStorage(collection, id);
-                }
-            } else {
-                return deleteFromLocalStorage(collection, id);
-            }
-        }
-        
-        // LocalStorage fallback functions
-        function saveToLocalStorage(collection, data) {
-            const key = `chinaTours_${collection}`;
-            let items = JSON.parse(localStorage.getItem(key)) || [];
-            
-            if (data.id) {
-                const index = items.findIndex(item => item.id === data.id);
-                if (index !== -1) {
-                    items[index] = data;
-                } else {
-                    items.push(data);
-                }
-            } else {
-                data.id = items.length > 0 ? Math.max(...items.map(item => item.id)) + 1 : 1;
-                items.push(data);
-            }
-            
-            localStorage.setItem(key, JSON.stringify(items));
-            return data;
-        }
-        
-        function getFromLocalStorage(collection) {
-            const key = `chinaTours_${collection}`;
-            return JSON.parse(localStorage.getItem(key)) || [];
-        }
-        
-        function deleteFromLocalStorage(collection, id) {
-            const key = `chinaTours_${collection}`;
-            let items = JSON.parse(localStorage.getItem(key)) || [];
-            items = items.filter(item => item.id !== id);
-            localStorage.setItem(key, JSON.stringify(items));
-            return true;
-        }
-        
-        // ==================== EMAIL SERVICE ====================
-        
-        // Using EmailJS for email functionality (free tier available)
-        async function sendConfirmationEmail(bookingData) {
-            // In a real application, you would use a service like EmailJS, SendGrid, etc.
-            // This is a simulation of email sending
-            
-            const emailData = {
-                to: bookingData.customerEmail,
-                subject: `Xác nhận đặt tour - ${bookingData.tourName}`,
-                message: `
-                    Kính chào ${bookingData.customerName},
-                    
-                    Cảm ơn bạn đã đặt tour với China Tours!
-                    
-                    Thông tin đặt tour:
-                    - Mã đặt tour: ${bookingData.bookingCode}
-                    - Tên tour: ${bookingData.tourName}
-                    - Ngày khởi hành: ${bookingData.departureDate}
-                    - Số người: ${bookingData.adults} người lớn, ${bookingData.children} trẻ em
-                    - Tổng tiền: ${formatCurrency(bookingData.totalPrice)} VNĐ
-                    
-                    Chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ để xác nhận chi tiết.
-                    
-                    Trân trọng,
-                    Đội ngũ China Tours
-                `
-            };
-            
-            // Simulate API call
-            return new Promise((resolve) => {
-                setTimeout(() => {
-                    console.log('Email sent:', emailData);
-                    resolve(true);
-                }, 2000);
-            });
-        }
-        
-        // ==================== VALIDATION FUNCTIONS ====================
-        
-        function validatePhoneNumber(phone) {
-            const phoneRegex = /^[0-9]{10,11}$/;
-            return phoneRegex.test(phone);
-        }
-        
-        function validateEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-        
-        function showError(inputElement, errorElement, message) {
-            inputElement.classList.add('input-error');
-            errorElement.textContent = message;
-            errorElement.style.display = 'block';
-        }
-        
-        function hideError(inputElement, errorElement) {
-            inputElement.classList.remove('input-error');
-            errorElement.style.display = 'none';
-        }
-        
+
         // ==================== APPLICATION STATE ====================
-        
         let currentUser = null;
-        let currentTourPrice = 0;
-        let currentTourName = '';
-        let currentPhone = '';
-        
-        // ==================== DOM ELEMENTS ====================
-        
-        const bookingModal = document.getElementById('bookingModal');
-        const paymentModal = document.getElementById('paymentModal');
-        const confirmationModal = document.getElementById('confirmationModal');
-        const loginModal = document.getElementById('loginModal');
-        const registerModal = document.getElementById('registerModal');
-        const closeButtons = document.querySelectorAll('.close-modal');
-        const bookButtons = document.querySelectorAll('.btn-book');
-        const loginBtn = document.getElementById('loginBtn');
-        const registerBtn = document.getElementById('registerBtn');
-        const switchToRegister = document.getElementById('switchToRegister');
-        const switchToLogin = document.getElementById('switchToLogin');
-        const bookingForm = document.getElementById('bookingForm');
-        const loginForm = document.getElementById('loginForm');
-        const registerForm = document.getElementById('registerForm');
-        const tourNameInput = document.getElementById('tourName');
-        const adultsSelect = document.getElementById('adults');
-        const childrenSelect = document.getElementById('children');
-        const totalPriceElement = document.getElementById('totalPrice');
-        const paymentAmountElement = document.getElementById('paymentAmount');
-        const paymentNoteElement = document.getElementById('paymentNote');
-        const proceedToPaymentBtn = document.getElementById('proceedToPayment');
-        const backToBookingBtn = document.getElementById('backToBooking');
-        const backToToursBtn = document.getElementById('backToTours');
-        const confirmPaymentBtn = document.getElementById('confirmPayment');
-        const finishBookingBtn = document.getElementById('finishBooking');
-        const logoutBtn = document.getElementById('logoutBtn');
-        const userMenu = document.getElementById('userMenu');
-        const authButtons = document.getElementById('authButtons');
-        const userGreeting = document.getElementById('userGreeting');
-        const userAvatar = document.getElementById('userAvatar');
-        const dashboardLink = document.getElementById('dashboardLink');
-        const adminLink = document.getElementById('adminLink');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const homePage = document.getElementById('homePage');
-        const dashboardPage = document.getElementById('dashboardPage');
-        const adminPage = document.getElementById('adminPage');
-        const userBookings = document.getElementById('userBookings');
-        const allBookingsTable = document.getElementById('allBookingsTable');
-        const usersTable = document.getElementById('usersTable');
-        const toursTable = document.getElementById('toursTable');
-        const profileForm = document.getElementById('profileForm');
-        const dashboardTabs = document.querySelectorAll('.dashboard-tabs .tab');
-        const adminTabs = document.querySelectorAll('.admin-panel .tab');
-        const paymentMethods = document.querySelectorAll('input[name="paymentMethod"]');
-        const bankDetails = document.getElementById('bankDetails');
-        const cardDetails = document.getElementById('cardDetails');
-        const momoDetails = document.getElementById('momoDetails');
-        const toursContainer = document.getElementById('toursContainer');
-        const phoneInput = document.getElementById('phone');
-        const phoneError = document.getElementById('phoneError');
-        const regPhoneInput = document.getElementById('regPhone');
-        const regPhoneError = document.getElementById('regPhoneError');
-        const regPasswordInput = document.getElementById('regPassword');
-        const regConfirmPasswordInput = document.getElementById('regConfirmPassword');
-        const regPasswordError = document.getElementById('regPasswordError');
-        const profilePhoneInput = document.getElementById('profilePhone');
-        const profilePhoneError = document.getElementById('profilePhoneError');
-        
+        let currentTour = null;
+
         // ==================== INITIALIZATION ====================
-        
         document.addEventListener('DOMContentLoaded', function() {
             initializeApp();
         });
-        
+
         async function initializeApp() {
+            // Auth state listener
+            auth.onAuthStateChanged(async (user) => {
+                if (user) {
+                    await loadUserData(user.uid);
+                } else {
+                    currentUser = null;
+                    updateUIForUser();
+                }
+            });
+
+            // Load tours
             await loadTours();
-            checkLoginStatus();
+            
+            // Setup event listeners
             setupEventListeners();
             
-            // Set minimum date for departure date to today
+            // Set minimum date for booking
             const today = new Date();
             const yyyy = today.getFullYear();
             const mm = String(today.getMonth() + 1).padStart(2, '0');
             const dd = String(today.getDate()).padStart(2, '0');
-            const minDate = `${yyyy}-${mm}-${dd}`;
-            document.getElementById('departureDate').min = minDate;
-            
-            // Initialize total price
-            updateTotalPrice();
+            document.getElementById('bookingDate').min = `${yyyy}-${mm}-${dd}`;
         }
-        
+
+        // ==================== FIREBASE OPERATIONS ====================
+        async function loadUserData(userId) {
+            try {
+                const userDoc = await db.collection('users').doc(userId).get();
+                if (userDoc.exists) {
+                    currentUser = {
+                        uid: userId,
+                        email: userDoc.data().email,
+                        name: userDoc.data().name,
+                        phone: userDoc.data().phone,
+                        role: userDoc.data().role || 'user'
+                    };
+                    updateUIForUser();
+                    
+                    // Load user bookings if on dashboard
+                    if (document.getElementById('dashboardPage').style.display !== 'none') {
+                        await loadUserBookings();
+                    }
+                }
+            } catch (error) {
+                console.error("Error loading user data:", error);
+            }
+        }
+
         async function loadTours() {
-            const tours = await getData('tours');
-            if (tours.length === 0) {
-                // Load sample tours if no data exists
-                await loadSampleTours();
-            } else {
-                renderTours(tours);
-            }
-        }
-        
-        async function loadSampleTours() {
-            const sampleTours = [
-                {
-                    id: 1,
-                    name: "Tour Quảng Châu 4 Ngày 3 Đêm",
-                    destination: "Quảng Châu",
-                    duration: "4 ngày 3 đêm",
-                    price: 8200000,
-                    oldPrice: 9500000,
-                    image: "https://images.unsplash.com/photo-1511527661041-1c9a1a5b0d36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                    description: "Khám phá Quảng Châu - thành phố sầm uất với Chùa Quang Hiếu, Nhà thờ Thánh Tâm, và thưởng thức ẩm thực Quảng Đông đặc sắc.",
-                    status: "active"
-                },
-                {
-                    id: 2,
-                    name: "Tour Thâm Quyến 3 Ngày 2 Đêm",
-                    destination: "Thâm Quyến",
-                    duration: "3 ngày 2 đêm",
-                    price: 6500000,
-                    oldPrice: 7800000,
-                    image: "https://images.unsplash.com/photo-1571994822120-0d5b0ba817d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                    description: "Trải nghiệm Thâm Quyến - thành phố công nghệ với Window of the World, Happy Valley, và khu mua sắm sầm uất Đông Môn.",
-                    status: "active"
-                },
-                {
-                    id: 3,
-                    name: "Tour Thượng Hải 5 Ngày 4 Đêm",
-                    destination: "Thượng Hải",
-                    duration: "5 ngày 4 đêm",
-                    price: 12800000,
-                    oldPrice: 14500000,
-                    image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                    description: "Khám phá Thượng Hải - thành phố toàn cầu với Phố Đông, Tháp Truyền hình Minh Châu, Phố Nam Kinh và Disneyland Thượng Hải.",
-                    status: "active"
-                },
-                {
-                    id: 4,
-                    name: "Tour Cáp Nhĩ Tân Mùa Đông",
-                    destination: "Cáp Nhĩ Tân",
-                    duration: "4 ngày 3 đêm",
-                    price: 9500000,
-                    oldPrice: 11000000,
-                    image: "https://images.unsplash.com/photo-1547970812-67d81f1f4c53?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                    description: "Trải nghiệm Cáp Nhĩ Tân - thành phố băng đăng với Lễ hội điêu khắc băng tuyết, Công viên Zhaolin và ẩm thực đặc trưng vùng Đông Bắc.",
-                    status: "active"
-                },
-                {
-                    id: 5,
-                    name: "Tour Nam Kinh - Tô Châu 4 Ngày 3 Đêm",
-                    destination: "Nam Kinh, Tô Châu",
-                    duration: "4 ngày 3 đêm",
-                    price: 7800000,
-                    oldPrice: 9200000,
-                    image: "https://images.unsplash.com/photo-1599016844515-eee32d34b96b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                    description: "Khám phá Nam Kinh - cố đô Trung Hoa với Lăng Tôn Trung Sơn, Tử Cấm Thành Nam Kinh và Tô Châu với những khu vườn cổ điển tuyệt đẹp.",
-                    status: "active"
-                },
-                {
-                    id: 6,
-                    name: "Tour Bắc Kinh - Thượng Hải 6 Ngày 5 Đêm",
-                    destination: "Bắc Kinh, Thượng Hải",
-                    duration: "6 ngày 5 đêm",
-                    price: 15900000,
-                    oldPrice: 18500000,
-                    image: "https://images.unsplash.com/photo-1542662565-7e0b2b673b14?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                    description: "Tour cao cấp kết hợp Bắc Kinh và Thượng Hải, tham quan Vạn Lý Trường Thành, Tử Cấm Thành, Phố Đông và Disneyland.",
-                    status: "active"
+            try {
+                const toursContainer = document.getElementById('toursContainer');
+                const querySnapshot = await db.collection('tours').where('status', '==', 'active').get();
+                
+                if (querySnapshot.empty) {
+                    toursContainer.innerHTML = '<p>Chưa có tour nào. Vui lòng thêm tour trong Admin Panel.</p>';
+                    return;
                 }
-            ];
-            
-            for (const tour of sampleTours) {
-                await saveData('tours', tour);
+
+                toursContainer.innerHTML = '';
+                querySnapshot.forEach((doc) => {
+                    const tour = { id: doc.id, ...doc.data() };
+                    const tourElement = createTourElement(tour);
+                    toursContainer.appendChild(tourElement);
+                });
+            } catch (error) {
+                console.error("Error loading tours:", error);
+                document.getElementById('toursContainer').innerHTML = '<p>Lỗi tải tours. Vui lòng thử lại.</p>';
             }
-            
-            renderTours(sampleTours);
         }
-        
-        function renderTours(tours) {
-            toursContainer.innerHTML = '';
-            
-            tours.filter(tour => tour.status === 'active').forEach(tour => {
-                const tourCard = document.createElement('div');
-                tourCard.className = 'tour-card';
-                tourCard.innerHTML = `
-                    <img src="${tour.image}" alt="${tour.name}" class="tour-image">
-                    <div class="tour-info">
-                        <h3 class="tour-title">${tour.name}</h3>
-                        <div class="tour-duration">
-                            <i>⏱️</i> ${tour.duration}
+
+        async function loadUserBookings() {
+            try {
+                const userBookingsContainer = document.getElementById('userBookings');
+                const querySnapshot = await db.collection('bookings')
+                    .where('userId', '==', currentUser.uid)
+                    .orderBy('bookingDate', 'desc')
+                    .get();
+                
+                if (querySnapshot.empty) {
+                    userBookingsContainer.innerHTML = '<p>Bạn chưa đặt tour nào.</p>';
+                    return;
+                }
+
+                userBookingsContainer.innerHTML = '';
+                querySnapshot.forEach((doc) => {
+                    const booking = { id: doc.id, ...doc.data() };
+                    const bookingElement = createBookingElement(booking);
+                    userBookingsContainer.appendChild(bookingElement);
+                });
+            } catch (error) {
+                console.error("Error loading user bookings:", error);
+                document.getElementById('userBookings').innerHTML = '<p>Lỗi tải dữ liệu.</p>';
+            }
+        }
+
+        async function loadAllBookings() {
+            try {
+                const allBookingsContainer = document.getElementById('allBookingsList');
+                const querySnapshot = await db.collection('bookings')
+                    .orderBy('bookingDate', 'desc')
+                    .get();
+                
+                if (querySnapshot.empty) {
+                    allBookingsContainer.innerHTML = '<p>Chưa có đơn đặt nào.</p>';
+                    return;
+                }
+
+                allBookingsContainer.innerHTML = '';
+                querySnapshot.forEach((doc) => {
+                    const booking = { id: doc.id, ...doc.data() };
+                    const bookingElement = createAdminBookingElement(booking);
+                    allBookingsContainer.appendChild(bookingElement);
+                });
+            } catch (error) {
+                console.error("Error loading all bookings:", error);
+                document.getElementById('allBookingsList').innerHTML = '<p>Lỗi tải dữ liệu.</p>';
+            }
+        }
+
+        // ==================== UI FUNCTIONS ====================
+        function createTourElement(tour) {
+            const div = document.createElement('div');
+            div.className = 'tour-card';
+            div.innerHTML = `
+                <img src="${tour.image}" alt="${tour.name}" class="tour-image">
+                <div class="tour-info">
+                    <h3 class="tour-title">${tour.name}</h3>
+                    <div class="tour-duration">⏱️ ${tour.duration}</div>
+                    <p class="tour-description">${tour.description}</p>
+                    <div class="tour-price">
+                        <div>
+                            <span class="price">${formatCurrency(tour.price)} VNĐ</span>
+                            <span class="old-price">${formatCurrency(tour.oldPrice)} VNĐ</span>
                         </div>
-                        <p class="tour-description">${tour.description}</p>
-                        <div class="tour-price">
-                            <div>
-                                <span class="price">${formatCurrency(tour.price)} VNĐ</span>
-                                <span class="old-price">${formatCurrency(tour.oldPrice)} VNĐ</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-book" data-tour="${tour.name}" data-price="${tour.price}">Đặt ngay</button>
                     </div>
-                `;
-                toursContainer.appendChild(tourCard);
-            });
-            
-            // Re-attach event listeners to book buttons
-            document.querySelectorAll('.btn-book').forEach(button => {
-                button.addEventListener('click', handleBookTour);
-            });
+                    <button class="btn btn-book" 
+                            data-tour-id="${tour.id}"
+                            data-tour-name="${tour.name}"
+                            data-tour-price="${tour.price}">
+                        Đặt ngay
+                    </button>
+                </div>
+            `;
+            return div;
         }
-        
-        // ==================== EVENT LISTENERS ====================
-        
+
+        function createBookingElement(booking) {
+            const div = document.createElement('div');
+            div.className = 'booking-card';
+            div.innerHTML = `
+                <div class="booking-info">
+                    <h3>${booking.tourName}</h3>
+                    <div class="booking-meta">
+                        <span>Ngày: ${formatDate(booking.bookingDate)}</span>
+                        <span>Số người: ${booking.adults || 1} người lớn</span>
+                        <span>Tổng: ${formatCurrency(booking.totalPrice)} VNĐ</span>
+                    </div>
+                    <div class="booking-status status-${booking.status}">
+                        ${getStatusText(booking.status)}
+                    </div>
+                    ${booking.bookingCode ? `<p><strong>Mã booking:</strong> ${booking.bookingCode}</p>` : ''}
+                </div>
+            `;
+            return div;
+        }
+
+        function createAdminBookingElement(booking) {
+            const div = document.createElement('div');
+            div.className = 'booking-card';
+            div.innerHTML = `
+                <div class="booking-info">
+                    <h3>${booking.tourName}</h3>
+                    <div class="booking-meta">
+                        <span><strong>Khách hàng:</strong> ${booking.customerName}</span>
+                        <span><strong>Ngày:</strong> ${formatDate(booking.bookingDate)}</span>
+                        <span><strong>Tổng:</strong> ${formatCurrency(booking.totalPrice)} VNĐ</span>
+                    </div>
+                    <div class="booking-meta">
+                        <span><strong>Email:</strong> ${booking.customerEmail}</span>
+                        <span><strong>Phone:</strong> ${booking.customerPhone || 'N/A'}</span>
+                    </div>
+                    <div class="booking-status status-${booking.status}">
+                        ${getStatusText(booking.status)}
+                    </div>
+                    ${booking.bookingCode ? `<p><strong>Mã booking:</strong> ${booking.bookingCode}</p>` : ''}
+                </div>
+            `;
+            return div;
+        }
+
+        function updateUIForUser() {
+            const authButtons = document.getElementById('authButtons');
+            const userMenu = document.getElementById('userMenu');
+            const dashboardLink = document.getElementById('dashboardLink');
+            const adminLink = document.getElementById('adminLink');
+
+            if (currentUser) {
+                authButtons.style.display = 'none';
+                userMenu.style.display = 'flex';
+                document.getElementById('userGreeting').textContent = `Xin chào, ${currentUser.name}`;
+                document.getElementById('userAvatar').textContent = currentUser.name.charAt(0).toUpperCase();
+                dashboardLink.style.display = 'block';
+                
+                if (currentUser.role === 'admin') {
+                    adminLink.style.display = 'block';
+                } else {
+                    adminLink.style.display = 'none';
+                }
+
+                // Update profile form
+                document.getElementById('profileName').value = currentUser.name;
+                document.getElementById('profileEmail').value = currentUser.email;
+                document.getElementById('profilePhone').value = currentUser.phone || '';
+            } else {
+                authButtons.style.display = 'flex';
+                userMenu.style.display = 'none';
+                dashboardLink.style.display = 'none';
+                adminLink.style.display = 'none';
+            }
+        }
+
+        // ==================== EVENT HANDLERS ====================
         function setupEventListeners() {
-            // Phone number validation
-            phoneInput.addEventListener('input', function() {
-                if (validatePhoneNumber(this.value)) {
-                    hideError(this, phoneError);
-                } else {
-                    showError(this, phoneError, 'Số điện thoại phải có 10-11 chữ số');
+            // Navigation
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const page = link.getAttribute('data-page');
+                    showPage(page);
+                });
+            });
+
+            // Auth buttons
+            document.getElementById('loginBtn').addEventListener('click', () => {
+                showModal('loginModal');
+            });
+
+            document.getElementById('registerBtn').addEventListener('click', () => {
+                showModal('registerModal');
+            });
+
+            document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+
+            // Modal switches
+            document.getElementById('switchToRegister').addEventListener('click', (e) => {
+                e.preventDefault();
+                hideModal('loginModal');
+                showModal('registerModal');
+            });
+
+            document.getElementById('switchToLogin').addEventListener('click', (e) => {
+                e.preventDefault();
+                hideModal('registerModal');
+                showModal('loginModal');
+            });
+
+            // Forms
+            document.getElementById('loginForm').addEventListener('submit', handleLogin);
+            document.getElementById('registerForm').addEventListener('submit', handleRegister);
+            document.getElementById('profileForm').addEventListener('submit', handleProfileUpdate);
+            document.getElementById('bookingForm').addEventListener('submit', handleBooking);
+
+            // Dashboard tabs
+            document.querySelectorAll('.dashboard-tabs .tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabName = tab.getAttribute('data-tab');
+                    switchTab(tabName);
+                });
+            });
+
+            // Book tour buttons
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('btn-book')) {
+                    handleBookTourClick(e.target);
                 }
             });
-            
-            regPhoneInput.addEventListener('input', function() {
-                if (validatePhoneNumber(this.value)) {
-                    hideError(this, regPhoneError);
-                } else {
-                    showError(this, regPhoneError, 'Số điện thoại phải có 10-11 chữ số');
-                }
+
+            // Close modals
+            document.querySelectorAll('.close-modal').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    hideModal(modal.id);
+                });
             });
-            
-            profilePhoneInput.addEventListener('input', function() {
-                if (validatePhoneNumber(this.value)) {
-                    hideError(this, profilePhoneError);
-                } else {
-                    showError(this, profilePhoneError, 'Số điện thoại phải có 10-11 chữ số');
-                }
-            });
-            
-            // Password confirmation validation
-            regConfirmPasswordInput.addEventListener('input', function() {
-                if (this.value === regPasswordInput.value) {
-                    hideError(this, regPasswordError);
-                } else {
-                    showError(this, regPasswordError, 'Mật khẩu xác nhận không khớp');
-                }
-            });
-            
-            // Rest of event listeners remain the same as previous version...
-            // [Previous event listener code would go here]
-            // For brevity, I'm including the most critical parts
+
+            // Booking form changes
+            document.getElementById('bookingAdults').addEventListener('change', updateBookingPrice);
+            document.getElementById('bookingChildren').addEventListener('change', updateBookingPrice);
         }
-        
-        function handleBookTour() {
-            if (!currentUser) {
-                alert('Vui lòng đăng nhập để đặt tour');
-                loginModal.style.display = 'flex';
+
+        async function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            try {
+                showLoading('login');
+                const userCredential = await auth.signInWithEmailAndPassword(email, password);
+                console.log("Login successful:", userCredential.user.uid);
+                hideModal('loginModal');
+                showAlert('Đăng nhập thành công!', 'success');
+            } catch (error) {
+                console.error("Login error:", error);
+                showAlert('Đăng nhập thất bại: ' + error.message, 'error');
+            } finally {
+                hideLoading('login');
+            }
+        }
+
+        async function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('regFullName').value;
+            const email = document.getElementById('regEmail').value;
+            const phone = document.getElementById('regPhone').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+
+            if (password !== confirmPassword) {
+                showAlert('Mật khẩu xác nhận không khớp!', 'error');
                 return;
             }
-            
-            currentTourName = this.getAttribute('data-tour');
-            currentTourPrice = parseInt(this.getAttribute('data-price'));
-            
-            tourNameInput.value = currentTourName;
-            updateTotalPrice();
-            
-            // Pre-fill user info if logged in
-            document.getElementById('fullName').value = currentUser.name;
-            document.getElementById('email').value = currentUser.email;
-            document.getElementById('phone').value = currentUser.phone;
-            
-            bookingModal.style.display = 'flex';
+
+            if (!validatePhoneNumber(phone)) {
+                showAlert('Số điện thoại không hợp lệ!', 'error');
+                return;
+            }
+
+            try {
+                showLoading('register');
+                const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+                const user = userCredential.user;
+
+                // Save user data to Firestore
+                await db.collection('users').doc(user.uid).set({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    role: 'user',
+                    createdAt: new Date().toISOString(),
+                    updatedAt: new Date().toISOString()
+                });
+
+                hideModal('registerModal');
+                showAlert('Đăng ký thành công!', 'success');
+            } catch (error) {
+                console.error("Registration error:", error);
+                showAlert('Đăng ký thất bại: ' + error.message, 'error');
+            } finally {
+                hideLoading('register');
+            }
         }
-        
+
+        async function handleProfileUpdate(e) {
+            e.preventDefault();
+            if (!currentUser) return;
+
+            const name = document.getElementById('profileName').value;
+            const email = document.getElementById('profileEmail').value;
+            const phone = document.getElementById('profilePhone').value;
+
+            if (!validatePhoneNumber(phone)) {
+                showAlert('Số điện thoại không hợp lệ!', 'error');
+                return;
+            }
+
+            try {
+                await db.collection('users').doc(currentUser.uid).update({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    updatedAt: new Date().toISOString()
+                });
+
+                // Update current user data
+                currentUser.name = name;
+                currentUser.email = email;
+                currentUser.phone = phone;
+                updateUIForUser();
+
+                showAlert('Cập nhật thông tin thành công!', 'success');
+            } catch (error) {
+                console.error("Profile update error:", error);
+                showAlert('Cập nhật thất bại: ' + error.message, 'error');
+            }
+        }
+
+        function handleBookTourClick(button) {
+            if (!currentUser) {
+                showAlert('Vui lòng đăng nhập để đặt tour!', 'error');
+                showModal('loginModal');
+                return;
+            }
+
+            const tourId = button.getAttribute('data-tour-id');
+            const tourName = button.getAttribute('data-tour-name');
+            const tourPrice = button.getAttribute('data-tour-price');
+
+            currentTour = { id: tourId, name: tourName, price: parseInt(tourPrice) };
+
+            document.getElementById('tourName').value = tourName;
+            updateBookingPrice();
+            showModal('bookingModal');
+        }
+
+        async function handleBooking(e) {
+            e.preventDefault();
+            if (!currentUser || !currentTour) return;
+
+            const adults = parseInt(document.getElementById('bookingAdults').value);
+            const children = parseInt(document.getElementById('bookingChildren').value);
+            const bookingDate = document.getElementById('bookingDate').value;
+            const totalPrice = currentTour.price * adults + (currentTour.price * children * 0.5);
+
+            try {
+                const bookingData = {
+                    userId: currentUser.uid,
+                    tourId: currentTour.id,
+                    tourName: currentTour.name,
+                    customerName: currentUser.name,
+                    customerEmail: currentUser.email,
+                    customerPhone: currentUser.phone,
+                    adults: adults,
+                    children: children,
+                    totalPrice: totalPrice,
+                    bookingDate: bookingDate,
+                    status: 'pending',
+                    bookingCode: 'CN' + Date.now(),
+                    createdAt: new Date().toISOString()
+                };
+
+                await db.collection('bookings').add(bookingData);
+                hideModal('bookingModal');
+                showAlert(`Đặt tour thành công! Mã booking: ${bookingData.bookingCode}`, 'success');
+
+                // Reload bookings if on dashboard
+                if (document.getElementById('dashboardPage').style.display !== 'none') {
+                    await loadUserBookings();
+                }
+            } catch (error) {
+                console.error("Booking error:", error);
+                showAlert('Đặt tour thất bại: ' + error.message, 'error');
+            }
+        }
+
+        async function handleLogout() {
+            try {
+                await auth.signOut();
+                currentUser = null;
+                updateUIForUser();
+                showPage('home');
+                showAlert('Đã đăng xuất!', 'success');
+            } catch (error) {
+                console.error("Logout error:", error);
+            }
+        }
+
         // ==================== UTILITY FUNCTIONS ====================
-        
+        function showPage(page) {
+            document.getElementById('homePage').style.display = 'none';
+            document.getElementById('dashboardPage').style.display = 'none';
+            document.getElementById('adminPage').style.display = 'none';
+
+            if (page === 'home') {
+                document.getElementById('homePage').style.display = 'block';
+            } else if (page === 'dashboard') {
+                if (currentUser) {
+                    document.getElementById('dashboardPage').style.display = 'block';
+                    loadUserBookings();
+                } else {
+                    showAlert('Vui lòng đăng nhập!', 'error');
+                    showModal('loginModal');
+                }
+            } else if (page === 'admin') {
+                if (currentUser && currentUser.role === 'admin') {
+                    document.getElementById('adminPage').style.display = 'block';
+                    loadAllBookings();
+                } else {
+                    showAlert('Bạn không có quyền truy cập!', 'error');
+                }
+            } else if (page === 'tours') {
+                document.getElementById('homePage').style.display = 'block';
+                document.querySelector('.tours').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function switchTab(tabName) {
+            // Update tabs
+            document.querySelectorAll('.dashboard-tabs .tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`.dashboard-tabs .tab[data-tab="${tabName}"]`).classList.add('active');
+
+            // Update content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`${tabName}Tab`).classList.add('active');
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function hideModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function showLoading(context) {
+            const elements = {
+                login: ['loginText', 'loginLoading'],
+                register: ['registerText', 'registerLoading']
+            };
+            
+            if (elements[context]) {
+                document.getElementById(elements[context][0]).style.display = 'none';
+                document.getElementById(elements[context][1]).style.display = 'inline-block';
+            }
+        }
+
+        function hideLoading(context) {
+            const elements = {
+                login: ['loginText', 'loginLoading'],
+                register: ['registerText', 'registerLoading']
+            };
+            
+            if (elements[context]) {
+                document.getElementById(elements[context][0]).style.display = 'inline';
+                document.getElementById(elements[context][1]).style.display = 'none';
+            }
+        }
+
+        function showAlert(message, type) {
+            // Simple alert implementation
+            alert(`${type === 'error' ? 'Lỗi' : 'Thành công'}: ${message}`);
+        }
+
+        function validatePhoneNumber(phone) {
+            const phoneRegex = /^[0-9]{10,11}$/;
+            return phoneRegex.test(phone);
+        }
+
         function formatCurrency(amount) {
             return amount.toLocaleString('vi-VN');
         }
-        
+
         function formatDate(dateString) {
             const date = new Date(dateString);
             return date.toLocaleDateString('vi-VN');
         }
-        
-        function updateTotalPrice() {
-            const adults = parseInt(adultsSelect.value);
-            const children = parseInt(childrenSelect.value);
-            const totalPrice = (adults * currentTourPrice) + (children * currentTourPrice * 0.5);
-            totalPriceElement.textContent = `Tổng tiền: ${formatCurrency(totalPrice)} VNĐ`;
+
+        function getStatusText(status) {
+            switch(status) {
+                case 'pending': return 'Chờ xác nhận';
+                case 'confirmed': return 'Đã xác nhận';
+                case 'cancelled': return 'Đã hủy';
+                default: return status;
+            }
         }
-        
-        // ==================== CORE FUNCTIONALITY ====================
-        
-        // The rest of the functionality (user authentication, booking management, admin panel)
-        // would be implemented similarly to the previous version but with Firebase integration
-        
-        // Note: This is a simplified version focusing on the new features requested.
-        // A full implementation would include all the previous functionality integrated with Firebase.
+
+        function updateBookingPrice() {
+            if (!currentTour) return;
+            
+            const adults = parseInt(document.getElementById('bookingAdults').value);
+            const children = parseInt(document.getElementById('bookingChildren').value);
+            const totalPrice = currentTour.price * adults + (currentTour.price * children * 0.5);
+            
+            document.getElementById('bookingTotalPrice').textContent = `Tổng tiền: ${formatCurrency(totalPrice)} VNĐ`;
+        }
+
+        // Admin functions
+        function showAddTourModal() {
+            showAlert('Chức năng thêm tour sẽ được tích hợp trong phiên bản tiếp theo!', 'info');
+        }
+
+        console.log("China Tours App initialized successfully!");
     </script>
 </body>
 </html>
